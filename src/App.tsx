@@ -1,10 +1,23 @@
-import Navbar from "./componentes/Navbar.tsx";
+import { useState } from "react";
+import Navbar from "./componentes/Navbar";
+import ProfileModal from "./componentes/ProfileModal";
 
 function App() {
+  const [showProfile, setShowProfile] = useState(false);
+
   return (
     <>
-      <Navbar />
-      <h1>Mi aplicación React</h1>
+      <Navbar
+        onProfileClick={() => setShowProfile(true)}
+      />
+
+      <ProfileModal
+        isOpen={showProfile}
+        onClose={() => setShowProfile(false)}
+        name="Juan Pérez"
+        email="juan@email.com"
+        phone="+591 77777777"
+      />
     </>
   );
 }
