@@ -1,12 +1,12 @@
+import Navbar from "./componentes/Navbar.tsx";
 
 function App() {
- 
-
   return (
     <>
-      <h1>HOLA</h1>
+      <Navbar />
+      <h1>Mi aplicación React</h1>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
