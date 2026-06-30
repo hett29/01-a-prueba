@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./componentes/Navbar";
 import ProfileModal from "./componentes/ProfileModal";
+import PokemonList from "./componentes/PokemonList";
 
 function App() {
   const [showProfile, setShowProfile] = useState(false);
@@ -10,6 +11,19 @@ function App() {
       <Navbar
         onProfileClick={() => setShowProfile(true)}
       />
+
+      <div
+        style={{
+          padding: "20px",
+          marginTop: "20px",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>
+          Primeros 10 Pokémon
+        </h1>
+
+        <PokemonList />
+      </div>
 
       <ProfileModal
         isOpen={showProfile}
